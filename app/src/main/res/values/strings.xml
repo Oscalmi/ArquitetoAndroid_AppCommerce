@@ -4,4 +4,5 @@
     <!--Strings da tela principal-->
     <string name="title_categorias_populares">Categorias Populares</string>
     <string name="title_produtos_recentes">Produtos Recentes</string>
+    <string name="title_activity_product_detail">ProductDetailActivity</string>
 </resources>
