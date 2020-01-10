@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         val productItem: LinearLayout = findViewById(R.id.ll_product_item)
 
         productItem.setOnClickListener{
-            val intent: Intent= Intent(this, ProductDetailActivity::class.java)
+            val intent: Intent = Intent(this, ProductDetailActivity::class.java)
             startActivity(intent)
         }
 
