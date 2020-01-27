@@ -60,7 +60,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
 
         when (item.itemId) {
-            R.id.nav_home -> Toast.makeText(this,"Home", Toast.LENGTH_LONG).show()
+            R.id.nav_home -> {
+                val intent = Intent(this, MainActivity::class.java) Toast.makeText(this,"Home", Toast.LENGTH_LONG).show()
+            }
+
             R.id.nav_account -> Toast.makeText(this,"Conta", Toast.LENGTH_LONG).show()
             R.id.nav_category -> Toast.makeText(this,"Categoria", Toast.LENGTH_LONG).show()
             R.id.nav_orders -> Toast.makeText(this,"Compras", Toast.LENGTH_LONG).show()
