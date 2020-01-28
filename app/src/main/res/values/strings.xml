@@ -27,5 +27,6 @@
     <string name="product_detail_descricao">Descrição</string>
     <string name="product_detail_cor">Cor</string>
     <string name="product_detail_tamanho">Tamanho</string>
+    <string name="user_register_title">Cadastro de Usuário</string>
 
 </resources>
