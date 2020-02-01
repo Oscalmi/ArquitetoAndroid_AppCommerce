@@ -36,7 +36,17 @@
     <string name="user_login_nao_tem_cadastro">Não tem cadastro?</string>
     <string name="user_login_title">Login</string>
 
+
     <!--Strings do Perfil do Usuario-->
+    <string name="user_profile_title">Perfil</string>
+    <string name="user_profile_sobrenome">sobrenome</string>
+    <string name="user_profile_endereco">Endereço</string>
+    <string name="user_profile_rua_avenida">Rua / Avenida</string>
+    <string name="user_profile_numero">Número</string>
+    <string name="user_profile_complemento">Complemento (Apartamento / Bloco)</string>
+    <string name="user_profile_cep">CEP</string>
+    <string name="user_profile_atualizar">ATUALIZAR</string>
+    <string name="user_profile_cidade">Cidade</string>
     <string-array name="states">
         <item>Acre (AC)</item>
         <item>Alagoas (AL)</item>

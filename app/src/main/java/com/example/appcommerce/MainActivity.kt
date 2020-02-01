@@ -35,7 +35,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         drawerLayout = findViewById(R.id.nav_drawer_layout)
 
-        val toggle: ActionBarDrawerToggle = ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.toggle_open, R.string.toggle_close)
+        val toggle: ActionBarDrawerToggle = ActionBarDrawerToggle(
+            this,
+            drawerLayout,
+            toolbar,
+            R.string.toggle_open,
+            R.string.toggle_close
+        )
         drawerLayout.addDrawerListener(toggle)
 
         toggle.syncState()
@@ -44,13 +50,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         navigationView.setNavigationItemSelectedListener(this)
 
         val productItem: LinearLayout = findViewById(R.id.ll_product_item)
-        productItem.setOnClickListener{
+        productItem.setOnClickListener {
             val intent: Intent = Intent(this, ProductDetailActivity::class.java)
             startActivity(intent)
         }
 
         textLogin = navigationView.getHeaderView(0).findViewById(R.id.header_profile_name)
-        textLogin.setOnClickListener{
+        textLogin.setOnClickListener {
             val intent = Intent(this, UserLoginActivity::class.java)
             startActivity(intent)
         }
@@ -73,14 +79,14 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
 
             R.id.nav_account -> {
-                val intent = Intent(this,  UserProfileActivity::class.java)
+                val intent = Intent(this, UserProfileActivity::class.java)
                 startActivity(intent)
             }
 
-            R.id.nav_category -> Toast.makeText(this,"Categoria", Toast.LENGTH_LONG).show()
-            R.id.nav_orders -> Toast.makeText(this,"Compras", Toast.LENGTH_LONG).show()
-            R.id.nav_cart -> Toast.makeText(this,"Carrinho", Toast.LENGTH_LONG).show()
-            R.id.nav_logout -> Toast.makeText(this,"Sair", Toast.LENGTH_LONG).show()
+            R.id.nav_category -> Toast.makeText(this, "Categoria", Toast.LENGTH_LONG).show()
+            R.id.nav_orders -> Toast.makeText(this, "Compras", Toast.LENGTH_LONG).show()
+            R.id.nav_cart -> Toast.makeText(this, "Carrinho", Toast.LENGTH_LONG).show()
+            R.id.nav_logout -> Toast.makeText(this, "Sair", Toast.LENGTH_LONG).show()
         }
 
         drawerLayout.closeDrawer(GravityCompat.START)
