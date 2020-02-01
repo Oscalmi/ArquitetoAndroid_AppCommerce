@@ -19,7 +19,7 @@
     <!--Strings do Cadastro de Usuário-->
     <string name="user_register_cadastrar">CADASTRAR</string>
     <string name="user_register_senha">Senha</string>
-    <string name="user_register_e_mail">E-mail</string>
+    <string name="user_register_email">E-mail</string>
     <string name="user_register_nome">Nome</string>
     <string name="user_register_title">Cadastro de Usuário</string>
 
@@ -34,5 +34,6 @@
     <string name="user_login_esqueceu_sua_senha">Esqueceu sua senha?</string>
     <string name="user_login_cadastre_se_aqui">Cadastre-se aqui</string>
     <string name="user_login_nao_tem_cadastro">Não tem cadastro?</string>
+    <string name="user_login_title">Login</string>
 
 </resources>

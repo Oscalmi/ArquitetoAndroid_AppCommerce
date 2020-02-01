@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     lateinit var drawerLayout: DrawerLayout
     lateinit var navigationView: NavigationView
     lateinit var textTitle: TextView
-    lateinit var textlogin: TextView
+    lateinit var textLogin: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,12 +49,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             startActivity(intent)
         }
 
-        textlogin=findViewById(R.id.header_profile_name)
-        textlogin.setOnClickListener{
-            val intent=Intent(this,UserLoginActivity::class.java)
+        textLogin = navigationView.getHeaderView(0).findViewById(R.id.header_profile_name)
+        textLogin.setOnClickListener{
+            val intent = Intent(this, UserLoginActivity::class.java)
             startActivity(intent)
         }
-
 
     }
 
