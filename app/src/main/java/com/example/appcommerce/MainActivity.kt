@@ -73,7 +73,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
 
             R.id.nav_account -> {
-                val intent = Intent(this,  UserRegisterActivity::class.java)
+                val intent = Intent(this,  UserProfileActivity::class.java)
                 startActivity(intent)
             }
 
