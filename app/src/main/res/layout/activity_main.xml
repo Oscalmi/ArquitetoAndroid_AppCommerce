@@ -96,6 +96,7 @@
                     android:layout_weight="2"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
+                    android:orientation="vertical"
                     >
 
                     <TextView
@@ -109,7 +110,6 @@
                         android:id="@+id/rv_main_product_category"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
                         />
 
                 </LinearLayout>
