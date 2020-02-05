@@ -11,6 +11,8 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.recyclerview.widget.RecyclerView
+import com.example.appcommerce.Adapter.ProductCategoryAdapter
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -20,6 +22,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     lateinit var navigationView: NavigationView
     lateinit var textTitle: TextView
     lateinit var textLogin: TextView
+    lateinit var recyclerCategory: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,6 +63,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             val intent = Intent(this, UserLoginActivity::class.java)
             startActivity(intent)
         }
+
+        recyclerCategory = findViewById(R.id.rv_main_product_category)
+
+        val arrayCategory :
+        val adapterCategory: ProductCategoryAdapter(null, this)
 
     }
 
