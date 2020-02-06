@@ -23,6 +23,7 @@ class UserProfileActivity : AppCompatActivity() {
 
         textTitle = findViewById(R.id.toolbar_title)
         textTitle.text = getString(R.string.user_profile_title)
+
     }
 
     override fun onSupportNavigateUp(): Boolean {
