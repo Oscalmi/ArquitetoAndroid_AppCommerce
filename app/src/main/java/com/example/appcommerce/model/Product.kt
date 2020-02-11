@@ -6,7 +6,7 @@ data class Product (
     val category: ProductCategory,
     val description: String,
     val price: Double,
-    val color: List<ProductColor>,
-    val size: List<ProductSize>,
+    val colors: List<ProductColor>,
+    val size: ProductSize,
     val images: List<ProductImage>
 )

@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     lateinit var textTitle: TextView
     lateinit var textLogin: TextView
     lateinit var recyclerCategory: RecyclerView
+    lateinit var recyclerProduct: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -79,6 +80,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         recyclerCategory.adapter = adapterCategory
         recyclerCategory.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+
+        recyclerProduct = findViewById(R.id.rv_main_product)
 
     }
 
