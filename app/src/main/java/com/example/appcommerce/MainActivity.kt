@@ -13,8 +13,12 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.appcommerce.Adapter.ProductAdapter
 import com.example.appcommerce.Adapter.ProductCategoryAdapter
+import com.example.appcommerce.model.Product
 import com.example.appcommerce.model.ProductCategory
+import com.example.appcommerce.model.ProductColor
+import com.example.appcommerce.model.ProductSize
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -55,12 +59,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         navigationView = findViewById(R.id.nav_view)
         navigationView.setNavigationItemSelectedListener(this)
 
-        val productItem: LinearLayout = findViewById(R.id.ll_product_item)
-        productItem.setOnClickListener {
-            val intent: Intent = Intent(this, ProductDetailActivity::class.java)
-            startActivity(intent)
-        }
-
         textLogin = navigationView.getHeaderView(0).findViewById(R.id.header_profile_name)
         textLogin.setOnClickListener {
             val intent = Intent(this, UserLoginActivity::class.java)
@@ -83,6 +81,37 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         recyclerProduct = findViewById(R.id.rv_main_product)
 
+        val adapterProduct = ProductAdapter(fillRVProduct(), this)
+
+        recyclerProduct.adapter = adapterProduct
+        recyclerProduct.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+
+    }
+
+    fun fillRVProduct() : List<Product>{
+        val product1: Product = Product(
+            "1",
+            "Camiseta 89",
+            ProductCategory("id", "Camisetas"),
+            "Camiseta super leve para prática de esportes.",
+            19.90,
+            arrayListOf(ProductColor("1", "Branco", "#ffffff"), ProductColor("2", "Preta", "#000000")),
+            arrayListOf(ProductSize("1", "P"), ProductSize("2", "M"), ProductSize("3", "G")),
+            emptyList()
+        )
+
+        val product2: Product = Product(
+            "1",
+            "Calça Jeans",
+            ProductCategory("id", "Calças"),
+            "Calça impermeável e durável para rotina diária",
+            59.90,
+            arrayListOf(ProductColor("1", "Branco", "#ffffff"), ProductColor("2", "Preta", "#000000")),
+            arrayListOf(ProductSize("1", "M"), ProductSize("2", "G"), ProductSize("3", "XG")),
+            emptyList()
+        )
+
+        return arrayListOf(product1, product2)
     }
 
     override fun onBackPressed() {
