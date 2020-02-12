@@ -1,12 +1,15 @@
 package com.example.appcommerce.Adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.appcommerce.ProductDetailActivity
 import com.example.appcommerce.R
 import com.example.appcommerce.model.Product
 
@@ -23,10 +26,17 @@ class ProductAdapter (val list: List<Product>, val context: Context) : RecyclerV
         val product = list[position]
         holder.title.text = product.title
         holder.imageView.setImageResource(R.drawable.camiseta_mockup)
+
+        holder.cardView.setOnClickListener(){
+            val intent = Intent(context, ProductDetailActivity::class.java)
+            intent.putExtra())
+        }
+
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imageView: ImageView = itemView.findViewById(R.id.iv_product_image)
         val title: TextView = itemView.findViewById(R.id.tv_product_title)
+        val cardView: CardView = itemView.findViewById(R.id.cv_product_item)
     }
 }
