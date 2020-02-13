@@ -26,6 +26,7 @@
 
     <fragment
         android:id="@+id/fragment_product_category"
+        android:name="com.example.appcommerce.ProductCategoryFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout="@layout/fragment_product_category"
