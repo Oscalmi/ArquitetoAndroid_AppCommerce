@@ -45,9 +45,9 @@
                 />
 
             <TextView
+                android:id="@+id/tv_product_price"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="R$ 89,90"
                 android:textAppearance="@android:style/TextAppearance.Large"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
@@ -70,31 +70,6 @@
                 android:layout_height="wrap_content"
                 app:singleSelection="true"
                 >
-
-                <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:text="Branco"
-                    android:checkable="true"
-                    />
-
-                <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:text="Vermelho"
-                    android:checkable="true"
-                    />
-
-                <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:text="Azul"
-                    android:checkable="true"
-                    />
-
             </com.google.android.material.chip.ChipGroup>
 
             <TextView
@@ -107,46 +82,13 @@
                 />
 
             <com.google.android.material.chip.ChipGroup
-                android:id="@+id/chip_group_color"
+                android:id="@+id/chip_group_size"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:singleSelection="true"
                 >
-
-                <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:text="P"
-                    android:checkable="true"
-                    />
-
-                <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:text="M"
-                    android:checkable="true"
-                    />
-
-                <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:text="G"
-                    android:checkable="true"
-                    />
-
-                <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:text="GG"
-                    android:checkable="true"
-                    />
-
             </com.google.android.material.chip.ChipGroup>
 
             <Button
@@ -170,9 +112,9 @@
                 />
 
             <TextView
+                android:id="@+id/tv_product_desc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Texto explicativo do produto à venda!!! O texto longo pode ser apresentado em mais de uma linha automaticamente."
                 android:layout_marginTop="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginBottom="8dp"
