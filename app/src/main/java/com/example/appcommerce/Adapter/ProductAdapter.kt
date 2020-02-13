@@ -29,7 +29,8 @@ class ProductAdapter (val list: List<Product>, val context: Context) : RecyclerV
 
         holder.cardView.setOnClickListener(){
             val intent = Intent(context, ProductDetailActivity::class.java)
-            intent.putExtra())
+            intent.putExtra("PRODUCT", product)
+            context.startActivity(intent)
         }
 
     }

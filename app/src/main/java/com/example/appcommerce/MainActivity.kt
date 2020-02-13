@@ -101,7 +101,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         )
 
         val product2: Product = Product(
-            "1",
+            "2",
             "Calça Jeans",
             ProductCategory("id", "Calças"),
             "Calça impermeável e durável para rotina diária",
@@ -111,7 +111,18 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             emptyList()
         )
 
-        return arrayListOf(product1, product2)
+        val product3: Product = Product(
+            "3",
+            "Tênis Nimbus",
+            ProductCategory("id", "Calçados"),
+            "Tênis com amortecimento em gel, perfeito para corridas e outras práticas esportivas",
+            599.90,
+            arrayListOf(ProductColor("1", "Branco", "#ffffff"), ProductColor("2", "Azul", "#0000FF")),
+            arrayListOf(ProductSize("1", "40"), ProductSize("2", "42"), ProductSize("3", "44")),
+            emptyList()
+        )
+
+        return arrayListOf(product1, product2, product3)
     }
 
     override fun onBackPressed() {
